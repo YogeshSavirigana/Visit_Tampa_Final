@@ -1,0 +1,24 @@
+{%extends "layout3.html"%}   
+{%block title%}Users{%endblock%}
+{%block thead%}
+<td><strong>Plan ID</strong></td>
+<td><strong>Destination Code</strong></td>
+<td><strong>Name</strong></td>
+<td><strong>Email ID</strong></td>
+<td><strong>Phone Number</strong></td>
+<td><strong>Plan Date</strong></td>
+<td><strong>Gender</strong></td>
+{%endblock%}
+{%block data%}
+{% for row in rows %}
+<tr>
+    <td>{{ row["rowid"] }}</td>
+    <td>{{ row["destination"] }}</td>
+    <td> {{ row["name"]}}</td>
+    <td>{{ row["email"] }}</td>
+    <td>{{ row["phone"] }}</td>
+    <td>{{ row["date"] }}</td>
+    <td>{{ row["gender"] }}</td>
+</tr>
+{% endfor %}
+{%endblock%}     

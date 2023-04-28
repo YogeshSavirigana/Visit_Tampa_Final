@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="image/png" sizes="32x32" rel="icon" href="{{url_for('static', filename='palm.png') }}">
+    <title>Booking</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            box-sizing: border-box;
+            font-family: 'Red Hat Display', sans-serif;
+            background-color: burlywood;
+        }
+
+        .result {
+            margin: auto;
+            width: 100%;
+            padding: 10px;
+            font-size: 30px;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .thanks h1 {
+            margin: 10px;
+            width: 100%;
+            padding: 10px;
+            font-size: 70px;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .thanks p {
+            margin: 10px;
+            width: 100%;
+            padding: 10px;
+            font-size: 30px;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .planner {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px;
+            margin-left: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            align-items: center;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 50px;
+            background-color: #000000;
+            color: #fff;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="result">
+        <strong>Result of the Transaction:</strong> {{ msg }} <br><br>
+        <b><a href="{{ url_for('Best')}}"><button class="planner">Go To BEST Page</button></a></b>
+        <div class="thanks">
+            <h1>THANKS FOR YOUR ORDER</h1>
+            <p> - Visit TAMPA</p>
+        </div>
+    </div>
+</body>
+<footer>
+    <p>&copy; All Rights Reserved VISIT TAMPA 2023</p>
+</footer>
+
+</html>

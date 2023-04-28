@@ -1,0 +1,92 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="image/png" sizes="32x32" rel="icon" href="{{url_for('static', filename='palm.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='Styles5.css') }}">
+    <title>REGISTER</title>
+    <script>
+        function validateForm() {
+            var name = document.forms["registration-form"]["name"].value;
+            var email = document.forms["registration-form"]["email"].value;
+            var phone = document.forms["registration-form"]["phone"].value;
+            var date = document.forms["registration-form"]["date"].value;
+            var gender = document.forms["registration-form"]["gender"].value;
+            var places = document.forms["registration-form"]["places"].value;
+            if (places == "0") {
+                alert("Please select a destination.");
+                return false;
+            }
+            if (name == "") {
+                alert("Please enter your name.");
+                return false;
+            }
+            if (email == "") {
+                alert("Please enter your email.");
+                return false;
+            }
+            if (phone == "") {
+                alert("Please enter your phone number.");
+                return false;
+            }
+            if (date == "") {
+                alert("Please enter the date.");
+                return false;
+            }
+            if (gender == "0") {
+                alert("Please select your gender.");
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="forms">
+        <section class="wrapper">
+            <form class="registration-form" onsubmit="return validateForm()" method="POST" action="/addplan">
+                <br>
+                <br>
+                <h2>Registration Form</h2>
+                <label for="lang">Choose Your Destination:</label>
+                <select name="places" class="dropdown" required>
+                    <option>--SELECT--</option>
+                    <option value="Busch Gardens Tampa">Busch Gardens Tampa</option>
+                    <option value="The Florida Acquarium">The Florida Acquarium</option>
+                    <option value="Tampa Bay History Center">Tampa Bay History Center</option>
+                    <option value="Ybor City">Ybor City</option>
+                    <option value="Tampa Riverwalk">Tampa Riverwalk</option>
+                    <option value="Amalie Arena">Amalie Arena</option>
+                    <option value="The Straz Center for the Performing Arts">The Straz Center for the Performing Arts
+                    </option>
+                    <option value="Curtis Hixon Waterfront Park">Curtis Hixon Waterfront Park</option>
+                    <option value="Lowry Park Zoo">Lowry Park Zoo</option>
+                    <option value="International Plaza and Bay Street">International Plaza and Bay Street</option>
+                </select>
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Full name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" placeholder="Email address" id="email" name="email" required>
+                <label for="phone">Phone number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="(XXX)-XXX-XXXX" pattern="[0-9]{10}"
+                    minlength="10" maxlength="10" required>
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+                <label for="lang">Gender:</label>
+                <select name="gender" Class="dropdown" required>
+                    <option>--SELECT--</option>
+                    <option value="Male">MALE</option>
+                    <option value="FEMALE">FEMALE</option>
+                </select>
+                <button type="submit" formaction="/addplan" formmethod="POST">REGISTER</button>
+                <button class="planner" onclick="window.location.href='/places';">CANCEL</button>
+
+            </form>
+        </section>
+
+    </div>
+</body>
+
+</html>

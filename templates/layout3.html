@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="image/png" sizes="32x32" rel="icon" href="{{url_for('static', filename='palm.png') }}">
+    <title>{% block title %}{%endblock%}</title>
+    <style>
+		.container {
+			margin: auto;
+			width: 100%;
+			padding: 10px;
+		}
+        .table {
+			margin: auto;
+			width: 50%;
+			border: 1px solid black;
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+    <div class="container">
+        <table border= "1px" class="table">
+            <thead>
+                {%block thead%}{%endblock%}
+            </thead>         
+            {%block data%}{%endblock%}
+        </table>
+    </div>
+    <div class="container">
+    <footer>
+        <p>&copy; All Rights Reserved VISIT TAMPA 2023</p>
+    </footer>
+    </div>
+</body>
+</html>

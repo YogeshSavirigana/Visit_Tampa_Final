@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="image/png" sizes="32x32" rel="icon" href="{{url_for('static', filename='palm.png') }}">
+    <script>
+
+        function validateForm() {
+            const name = document.forms["signupForm"]["name"].value;
+            const mail = document.forms["signupForm"]["mail"].value;
+            const pass = document.forms["signupForm"]["pass"].value;
+            const checkBox = document.getElementById("signupCheck");
+
+            if (name == "" || mail == "" || pass == "" || checkBox.checked == false) {
+                alert("Please fill in all fields and accept the terms and conditions.");
+                return false;
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles6.css') }}">
+    <title>Login & Signup Form</title>
+</head>
+
+<body>
+    <section class="wrapper">
+        <div class="form signup">
+            <div>
+                <a href="/"><img src="{{ url_for('static', filename='close1.png') }}" class="close"></a>
+            </div>
+            <header>Signup</header>
+
+            <form name="signupForm" onsubmit="return validateForm()" action="{{ url_for('addrec') }}" method="POST">
+                <input type="text" name="name" placeholder="Full name" required />
+                <input type="email" name="mail" placeholder="Email address" required />
+                <input type="password" name="pass" placeholder="Password" required />
+                <div class="checkbox">
+                    <input type="checkbox" id="signupCheck" required />
+                    <label for="signupCheck">I accept all terms & conditions</label>
+                </div>
+                <input class="btn" type="submit" value="Signup">
+            </form>
+        </div>
+
+        <div class="form login">
+            <header>Login</header>
+            {% if error %}
+            <div class="error">{{ error }}</div>
+            {% endif %}
+            <form action="{{ url_for('sign') }}" method="POST">
+                <input type="email" name="email" placeholder="Email address" required />
+                <input type="password" name="password" placeholder="Password" required />
+                <input class="btn" type="submit" value="Login" />
+            </form>
+        </div>
+
+        <script>
+            const wrapper = document.querySelector(".wrapper"),
+                signupHeader = document.querySelector(".signup header"),
+                loginHeader = document.querySelector(".login header");
+
+            loginHeader.addEventListener("click", () => {
+                wrapper.classList.add("active");
+            });
+            signupHeader.addEventListener("click", () => {
+                wrapper.classList.remove("active");
+            });
+        </script>
+    </section>
+</body>
+
+</html>

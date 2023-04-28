@@ -1,0 +1,36 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="image/png" sizes="32x32" rel="icon" href="{{url_for('static', filename='palm.png') }}">
+    {% block headcss %}{% endblock %}
+    <title>{% block title %}{% endblock %}</title>
+</head>
+
+<body>
+    {% block header %}{% endblock %}
+    <div ID="navigation">
+        <nav>
+            <ul>
+                <li><a href="/index1">HOME</a></li>
+                <li><a href="/places">PLACES</a></li>
+                <li><a href="/FactsaboutTampa">FACTS</a></li>
+                <li><a href="/Best">BEST</a></li>
+                <li><a href="/AboutUs">ABOUT US</a></li>
+                <li><a href="/">SIGN OUT</a></li>
+            </ul>
+        </nav>
+
+    </div>
+    <div id="menubutton">
+        <img src="{{ url_for('static', filename='menu1.png') }}" id="MENU">
+    </div>
+
+    {% block content %}{% endblock %}
+    <footer>
+        <p>&copy; All Rights Reserved VISIT TAMPA 2023</p>
+    </footer>
+    {% block script %}{% endblock %}
+</body>
+
+</html>

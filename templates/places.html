@@ -1,0 +1,217 @@
+{% extends "layout2.html" %}
+{% block headcss %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles4.css') }}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+{% endblock %}
+{% block title %}places {% endblock %}
+{% block header %}
+<div id="header">
+</div>
+<nav>
+    <a href="/index1"><img src="{{ url_for('static', filename='VisitTampa.png') }}" id="logo"></a>
+</nav>
+</div>
+{% endblock %}
+{% block content %}
+</div>
+<br>
+<br>
+<br>
+<br>
+<div class="head1">
+    <h2>MUST VISIT PLACES IN TAMPA</h2>
+</div>
+
+</div>
+</div>
+<div class="slider">
+    <div class="slides">
+        <div class="slide">
+            <img src="{{ url_for('static', filename='BG.png') }}" alt="Busch Gardens, Tampa">
+            <div class="slide-details">
+                <h3>BUSCH GARDENS</h3>
+                <p>"Step into a world of excitement and wonder at Busch Gardens Tampa, where you can witness
+                    majestic
+                    animals,
+                    enjoy world-class entertainment, and create cherished memories with your loved ones in a
+                    thrilling
+                    and
+                    immersive theme park setting!"</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="{{ url_for('static', filename='FA.png') }}" alt="The Florida Acquarium">
+            <div class="slide-details">
+                <h3>THE FLORIDA ACQUARIUM</h3>
+                <p>"Discover the magic of the ocean at the Florida Aquarium, where you can embark on a journey
+                    through
+                    stunning exhibits showcasing the wonders of Florida's underwater ecosystems, learn about marine
+                    science and
+                    conservation, and engage in exciting activities that make for a fun and educational tourist
+                    experience!"</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="{{ url_for('static', filename='TBHC.png') }}" alt="Tampa Bay History Center">
+            <div class="slide-details">
+                <h3>TAMPA BAY HISTORY CENTER</h3>
+                <p>"Step back in time and uncover the rich history of Tampa Bay at the Tampa Bay History Center,
+                    where
+                    you can
+                    explore engaging exhibits, learn about the area's diverse cultural heritage, and discover the
+                    stories that
+                    have shaped this vibrant region for curious tourists."</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="{{ url_for('static', filename='YC.png') }}" alt="Ybor City">
+            <div class="slide-details">
+                <h3>YBOR CITY</h3>
+                <p>"Discover the vibrant charm of Ybor City, Tampa's historic Latin quarter, where you can stroll
+                    down
+                    brick-lined streets, experience the rich cultural heritage of the area, savor delicious Cuban
+                    cuisine, and
+                    immerse yourself in the colorful history that makes this neighborhood a top destination for
+                    curious
+                    tourists."</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="{{ url_for('static', filename='TR.png') }}" alt="Tampa Riverwalk">
+            <div class="slide-details">
+                <h3>TAMPA RIVERWALK</h3>
+                <p>"Indulge in the charm of Tampa Bay at the iconic Tampa Riverwalk, a waterfront promenade that
+                    spans
+                    2.6
+                    miles along the Hillsborough River, offering tourists a delightful mix of scenic beauty,
+                    recreational
+                    activities, and a vibrant urban scene that's perfect for a leisurely stroll or a fun-filled day
+                    out."</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="{{ url_for('static', filename='AA.png') }}" alt="Amalie Arena, Tampa">
+            <div class="slide-details">
+                <h3>AMALIE ARENA</h3>
+                <p>"Join the excitement at Amalie Arena, the premier event venue in Tampa Bay, where you can cheer
+                    on
+                    your
+                    favorite sports teams, rock out to chart-topping concerts, and create unforgettable memories at
+                    a
+                    world-class venue that offers top-notch entertainment for tourists and locals alike!"</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="{{ url_for('static', filename='SC.png') }}" alt="Straz Center, Tampa">
+            <div class="slide-details">
+                <h3>STRAZ CENTER</h3>
+                <p>"Discover the best of performing arts at the Straz Center Tampa, where you can indulge in a
+                    variety
+                    of
+                    shows, from musicals and dramas to comedy and family-friendly performances, in a beautiful
+                    setting
+                    that
+                    celebrates the arts, making it a must-visit attraction for tourists interested in culture and
+                    entertainment."</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="{{ url_for('static', filename='chwp.png') }}" alt="Curtis Hixon Waterfront Park, Tampa">
+            <div class="slide-details">
+                <h3>CURTIS HIXON WATERFRONT PARK</h3>
+                <p>"Nestled along the Hillsborough River, Curtis Hixon Waterfront Park offers a serene escape for
+                    tourists
+                    seeking tranquility in the heart of downtown Tampa. With its lush lawns, sparkling fountains,
+                    and
+                    stunning
+                    river views, it's a must-visit destination for nature lovers and those looking to unwind in a
+                    picturesque
+                    setting."</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="{{ url_for('static', filename='TTZ.png') }}" alt="Lowry Park Zoo, Tampa">
+            <div class="slide-details">
+                <h3>LOWRY PARK ZOO</h3>
+                <p>"Get up close and personal with amazing animals at Lowry Park Zoo, a top-rated destination for
+                    wildlife
+                    enthusiasts and families alike, featuring immersive exhibits, engaging educational programs, and
+                    exciting
+                    animal encounters that offer a unique and memorable experience for tourists."</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="{{ url_for('static', filename='BS.png') }}" alt="International Plaza and Bay Street, Tampa">
+            <div class="slide-details">
+                <h3>INTERNATIONAL PLAZA AND BAY STREET</h3>
+                <p>"Shop till you drop at International Plaza and Bay Street, where tourists can indulge in luxury
+                    retail
+                    therapy, from designer fashion to fine jewelry, while also enjoying an array of dining options
+                    and
+                    entertainment. With its elegant ambiance and renowned brands, this destination is a must-visit
+                    for
+                    discerning shoppers."</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="btn">
+    <a href="/form"><button class="planner">BOOK NOW</button></a>
+</div>
+
+{% endblock %}
+
+{% block script %}
+<script>
+    var menubutton = document.getElementById("menubutton")
+    var navigation = document.getElementById("navigation")
+    var MENU = document.getElementById("MENU")
+    navigation.style.right = "-250px"
+
+    menubutton.onclick = function () {
+        if (navigation.style.right == "-250px") {
+            navigation.style.right = "0";
+            MENU.src = "{{ url_for('static', filename='close1.png') }}"
+        }
+        else {
+            navigation.style.right = "-250px";
+            MENU.src = "{{ url_for('static', filename='menu1.png') }}"
+        }
+    }
+    document.getElementById("logo").addEventListener("click", function () {
+        window.location.href = "/";
+    });
+
+    let slideIndex = 0;
+    const slides = document.querySelector('.slides');
+
+    function showSlide(n) {
+        slides.style.transform = `translateX(-${n * 100}%)`;
+    }
+
+    function nextSlide() {
+        slideIndex++;
+        if (slideIndex >= slides.childElementCount) {
+            slideIndex = 0;
+        }
+        showSlide(slideIndex);
+    }
+
+    function prevSlide() {
+        slideIndex--;
+        if (slideIndex < 0) {
+            slideIndex = slides.childElementCount - 1;
+        }
+        showSlide(slideIndex);
+    }
+
+    setInterval(nextSlide, 3000);
+
+    document.querySelector(".clickme").addEventListener('click', function () {
+        window.location.href = "/form1";
+    });
+</script>
+</div>
+{% endblock %}

@@ -1,0 +1,183 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+    background-color: rgb(255, 255, 255);
+}
+
+#header {
+    right: 0px;
+    width: 100%;
+    height: 70px;
+    background: white;
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    z-index: 1;
+    box-shadow: 2px 2px 5px gray;
+
+}
+
+#logo {
+    right: 1150px;
+    top: 1px;
+    width: 50pt;
+    cursor: pointer;
+    position: fixed;
+    z-index: 1;
+
+}
+
+#navigation {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    right: -250px;
+    top: 0;
+    background: white;
+    box-shadow: 2px 2px 5px gray;
+    z-index: 2;
+    transition: 0.5s;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 50px 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+}
+
+nav ul li a:hover {
+    color: rgb(20, 130, 255);
+}
+
+#menubutton {
+    width: 50px;
+    height: 50px;
+    background: rgb(37, 37, 114);
+    text-align: center;
+    position: fixed;
+    right: 30px;
+    top: 10px;
+    border-radius: 3px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+#menubutton img {
+    width: 20px;
+    margin-top: 15px;
+}
+
+.head1 {
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    text-align: center;
+}
+
+.person {
+    text-align: center;
+    display: flex;
+    margin: auto;
+    margin: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    flex: 200px;
+    cursor: pointer;
+    overflow: hidden;
+
+}
+
+.image {
+    margin: 0;
+    top: 50%;
+    left: 50%;
+}
+
+.para h2 {
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.para p {
+    display: flex;
+    text-align: justify;
+    margin: 10px;
+    flex-wrap: wrap;
+    flex: 200px;
+    color: rgb(0, 0, 0);
+}
+
+.contact {
+    background-color: brown;
+    text-align: center;
+    border: 1px rgb(255, 255, 255);
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.contact:hover {
+    color: yellow;
+}
+
+.site {
+
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    color: rgb(0, 0, 0);
+
+}
+
+.content {
+    margin: 10px;
+    text-decoration: solid;
+    text-align: justify;
+    border-radius: 10px;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    flex: auto;
+    text-align: center;
+}
+
+footer {
+    width: 100%;
+    height: 50px;
+    background-color: #000000;
+    position: relative;
+    opacity: 100%;
+    bottom: 0;
+    padding: 10px;
+    margin-top: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+
+@media screen and (max-width : 3000px) {
+    #logo {
+        width: 50pt;
+        cursor: pointer;
+        padding: 10px 0;
+        position: fixed;
+        left: 30px;
+    }
+
+
+}

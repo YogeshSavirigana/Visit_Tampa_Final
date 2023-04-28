@@ -1,0 +1,314 @@
+{% extends "layout2.html" %}
+{% block headcss %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{url_for('static', filename='Styles3.css')}}">
+{%endblock%}
+{%block title%}BEST PLACES IN TAMPA{%endblock%}
+{%block header%}
+<div id="header">
+
+</div>
+<nav>
+	<a href="/index1"><img src="{{ url_for('static', filename='VisitTampa.png') }}" id="logo"></a>
+</nav>
+</div>
+{%endblock%}
+{%block content%}
+</div>
+<br>
+<br>
+<br>
+<div class="heading">
+	<h2>HOTELS</h2>
+</div>
+<section>
+	<div class="box">
+		<div><img src="{{url_for('static', filename='hyatt.jpg')}}" class="card-img-top" /></div>
+		<br>
+		<h3>Grand Hyatt</h3>
+		<p>Located on the waterfront, this upscale hotel features stunning views and elegant rooms. Amenities
+			include fitness center, and outdoor pool.</p>
+		<a href="/form1"><button class="planner">BOOK NOW</button></a>
+		<div class="reviews">
+			<h4>Rating:</h4>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<ul>
+				<li></li>
+				<li>The rooms were clean and comfortable. Would definitely stay here again.</li>
+			</ul>
+		</div>
+	</div>
+	<div class="box">
+		<div><img src="{{url_for('static', filename='hilton.jpg')}}" class="card-img-top" /></div>
+		<br>
+		<h3>Embassy Suites by Hilton</h3>
+		<p>This all-suite hotel is conveniently located near the convention center and offers spacious rooms,
+			complimentary breakfast, and a fitness center.</p>
+		<a href="/form1"><button class="planner">BOOK NOW</button></a>
+		<div class="reviews">
+			<h4>Rating:</h4>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<ul>
+				<li>Excellent hotel in a great location. The breakfast was delicious.</li>
+				<li>The rooms were clean and spacious. Would definitely recommend.</li>
+			</ul>
+		</div>
+	</div>
+	<div class="box">
+		<div><img src="{{url_for('static', filename='westin.jpg')}}" class="card-img-top" /></div>
+		<br>
+		<h3>The Westin</h3>
+		<p>Located on the bay, this modern hotel offers stylish rooms with water views, a rooftop pool, fitness
+			center,
+			and multiple dining options.</p>
+		<a href="/form1"><button class="planner">BOOK NOW</button></a>
+		<div class="reviews">
+			<h4>Rating:</h4>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star"></span>
+			<ul>
+				<li>Amazing hotel with great views. The rooftop pool was a highlight of our trip.</li>
+				<li>The rooms were spacious and clean. Would definitely stay here again.</li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<div class="heading">
+	<h2>SPORT TEAMS</h2>
+</div>
+<section>
+	<div class="box">
+		<div><img src="{{url_for('static', filename='go bucks.png')}}" width="294px" height="290px"></div>
+		<BR>
+		<h3>Tampa Bay Buccaneers (NFL)</h3>
+		<p>The Buccaneers are a professional football team based in Tampa Bay. They have won multiple championships
+			and are known for their passionate fans.</p>
+		<a href="https://www.buccaneers.com/"><button class="planner">VISIT</button></a>
+
+		<div class="reviews">
+			<h4>Rating:</h4>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<ul>
+				<li>Great team, always fun to watch!</li>
+				<li>The fans are the best!</li>
+				<li>Go Bucs!</li>
+			</ul>
+		</div>
+
+	</div>
+	<div class="box">
+		<div><img src="{{url_for('static', filename='lightning.png')}}" width="294px" height="290px" /></div>
+		<BR>
+		<h3>Tampa Bay Lightning (NHL)</h3>
+		<p>The Lightning are a professional hockey team based in Tampa Bay. They have won multiple championships and
+			play in the state-of-the-art Amalie Arena.</p>
+		<a
+			href="https://www.nhl.com/lightning/tickets/single-game-tickets?gclid=EAIaIQobChMIwJP1gKjk_QIVWPfjBx1N8QmFEAAYASAAEgKaPvD_BwE&gclsrc=aw.ds"><button
+				class="planner">VISIT</button></a>
+
+		<div class="reviews">
+
+			<h4>Rating:</h4>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<ul>
+				<li>Love going to Lightning games, the atmosphere is electric!</li>
+				<li>Their Stanley Cup win was amazing!</li>
+				<li>Let's go Bolts!</li>
+			</ul>
+		</div>
+	</div>
+	<div class="box">
+		<div><img src="{{url_for('static', filename='rays.png')}}" width="294px" height="290px" /></div>
+		<BR>
+		<h3>Tampa Bay Rays (MLB)</h3>
+		<p>The Rays are a professional baseball team based in St. Petersburg, just across the bay from Tampa. They
+			have made several playoff appearances and play in Tropicana Field.</p>
+		<a href="https://www.mlb.com/rays"><button class="planner">VISIT</button></a>
+		<div class="reviews">
+			<h4>Rating:</h4>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<ul>
+				<li>The Rays always surprise me with their talent!</li>
+				<li>Tropicana Field is a fun place to watch a game.</li>
+				<li>Go Rays!</li>
+			</ul>
+		</div>
+
+	</div>
+</section>
+
+
+<div class="heading">
+	<h2>UNIVERSITIES</h2>
+</div>
+<section>
+	<div class="box">
+		<div><img src="{{url_for('static', filename='USF.jpg')}}" class="card-img-top" /></div>
+		<br>
+		<h3>University of South Florida</h3>
+		<p>USF is a public research university with multiple campuses in Tampa Bay area and known for the programs
+			in business, engineering, and medicine.</p>
+		<a href="https://www.usf.edu/"><button class="planner">VISIT</button></a>
+		<div class="reviews1">
+			<h4>Rating:</h4>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star"></span>
+			<ul>
+				I loved my experience at USF! The faculty and staff are incredibly supportive and the campus is
+				beautiful
+			</ul>
+		</div>
+	</div>
+	<div class="box">
+		<div><img src="{{url_for('static', filename='HCC.png')}}" class="card-img-top" /></div>
+		<br>
+		<h3>Hillsborough College</h3>
+		<p>HCC is a community college with several campuses in the Tampa Bay area. It offers a wide range of
+			programs and is a popular choice for local students.</p>
+		<a href="https://www.hccfl.edu/"><button class="planner">VISIT</button></a>
+		<div class="reviews1">
+			<h4>Rating:</h4>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<ul>
+				HCC is a great option for those looking for affordable and flexible education. The professors are
+				knowledgeable and the facilities are top-notch.
+			</ul>
+		</div>
+	</div>
+	<div class="box">
+		<div><img src="{{url_for('static', filename='UT.png')}}" class="card-img-top" /></div>
+		<br>
+		<h3>University of Tampa</h3>
+		<p>UT is a private university located in the heart of downtown Tampa. It is known for its strong programs in
+			business, communication, and the arts.</p>
+		<a href="https://www.ut.edu/"><button class="planner">VISIT</button></a>
+		<div class="reviews1">
+			<h4>Rating:</h4>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<ul>
+				I had an amazing experience at UT. The professors are passionate about their subjects and the campus
+				is stunning
+			</ul>
+		</div>
+	</div>
+</section>
+</section>
+<div class="heading">
+	<h2>RESTAURANTS</h2>
+</div>
+<section>
+	<div class="box">
+		<div><img src="{{url_for('static', filename='cr.jpg')}}" class="card-img-top" /></div>
+		<br>
+		<h3>Columbia Restaurant</h3>
+		<p>the Columbia restaurant is a Spanish family-owned that has been a Tampa for over 100 years.</p>
+		<a href="/form1"><button class="planner">RESERVE</button></a>
+		<div class="reviews1">
+			<h4>Rating:</h4>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<ul>
+				The food was amazing and the atmosphere was so cozy. Highly recommend!
+			</ul>
+		</div>
+	</div>
+	<div class="box">
+		<div><img src="{{url_for('static', filename='BSH.jpg')}}" class="card-img-top" /></div>
+		<br>
+		<h3>Bern's Steak </h3>
+		<p>Opened in 1956, this destination features dry-aged steaks, a huge wine list & flocked wallpaper.</p>
+		<a href="/form1"><button class="planner">RESERVE</button></a>
+		<div class="reviews1">
+			<h4>Rating:</h4>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<ul>
+				Bern's never disappoints. The steak was cooked to perfection and the wine list was incredible
+			</ul>
+		</div>
+	</div>
+	<div class="box">
+		<div><img src="{{url_for('static', filename='oe.png')}}" class="card-img-top" /></div>
+		<br>
+		<h3>Oxford Exchange</h3>
+		<p>European-inspired space featuring a restaurant, bookstore, coffeehouse & shop with decor & gifts.</p>
+		<a href="/form1"><button class="planner">RESERVE</button></a>
+		<div class="reviews1">
+			<h4>Rating:</h4>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star"></span>
+			<ul>
+				I loved the concept of this place and the food was great. The coffeehouse is a perfect spot to work
+			</ul>
+		</div>
+	</div>
+</section>
+{%endblock%}
+{%block script %}
+<script>
+	var menubutton = document.getElementById("menubutton")
+	var navigation = document.getElementById("navigation")
+	var MENU = document.getElementById("MENU")
+	navigation.style.right = "-250px"
+
+	menubutton.onclick = function () {
+		if (navigation.style.right == "-250px") {
+			navigation.style.right = "0";
+			MENU.src = "{{ url_for('static', filename = 'close1.png') }}"
+		}
+		else {
+			navigation.style.right = "-250px";
+			MENU.src = "{{ url_for('static', filename = 'menu1.png') }}"
+		}
+	}
+</script>
+{%endblock%}

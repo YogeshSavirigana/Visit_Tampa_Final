@@ -1,0 +1,72 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="image/png" sizes="32x32" rel="icon" href="{{url_for('static', filename='palm.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='Styles5.css')}}">
+    <title>REGISTER</title>
+</head>
+
+<body>
+    <div class="forms">
+        <section class="wrapper">
+            <form class="registration-form" onsubmit="return validateForm()">
+                <br>
+                <br>
+                <h2>Registration Form</h2>
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Full name" name="name">
+                <span id="name-error" class="error"></span>
+                <label for="email">Email:</label>
+                <input type="email" placeholder="Email address" id="email" name="email">
+                <span id="email-error" class="error"></span>
+                <label for="phone">Phone number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="(XXX)-XXX-XXXX" pattern="[0-9]{10}"
+                    minlength="10" maxlength="10">
+                <span id="phone-error" class="error"></span>
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date">
+                <span id="date-error" class="error"></span>
+                <button type="submit" formaction="/addbook" formmethod="post">REGISTER</button>
+                <button class="planner" formaction="/Best" type="button"
+                    onclick="window.location.href='/Best'">CANCEL</button>
+            </form>
+        </section>
+
+    </div>
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+
+            if (name == "") {
+                document.getElementById("name-error").innerHTML = "Please enter your name";
+                return false;
+            } else {
+                document.getElementById("name-error").innerHTML = "";
+            }
+
+            if (email == "") {
+                document.getElementById("email-error").innerHTML = "Please enter your email";
+                return false;
+            } else {
+                document.getElementById("email-error").innerHTML = "";
+            }
+
+            if (phone == "") {
+                document.getElementById("phone-error").innerHTML = "Please enter your phone number";
+                return false;
+            } else {
+                document.getElementById("phone-error").innerHTML = "";
+            }
+
+            return true;
+        }
+    </script>
+</body>
+
+</html>

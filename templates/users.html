@@ -1,0 +1,18 @@
+{%extends "layout3.html"%}   
+{%block title%}Users{%endblock%}
+{%block thead%}
+<td><strong>User ID</strong></td>
+<td><strong>Name</strong></td>
+<td><strong>Email</strong></td>
+<td><strong>Password</strong></td>
+{%endblock%}
+{%block data%}
+{% for row in rows %}
+<tr>
+    <td>{{ row["rowid"] }}</td>
+    <td>{{ row["fullname"] }}</td>
+    <td> {{ row["email"]}}</td>
+    <td>{{ row["password"] }}</td>
+</tr>
+{% endfor %}
+{%endblock%}     

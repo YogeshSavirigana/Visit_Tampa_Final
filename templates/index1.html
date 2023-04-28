@@ -1,0 +1,138 @@
+{% extends "layout2.html" %}
+{% block headcss %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+{% endblock %}
+{% block title %}VISIT TAMPA {% endblock %}
+{% block header %}
+<div class="dashboard">
+
+    <div id="header">
+
+    </div>
+    <nav>
+        <a href="/index1"><img src="{{ url_for('static', filename='VisitTampa.png') }}" id="logo"></a>
+    </nav>
+
+    <div class="textbox">
+        <h1>TAMPA</h1>
+    </div>
+    <div class="textbox1">
+        <a href="#section1"><span></span>Explore</a>
+    </div>
+
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="video" width="500px" height="400px">
+    <iframe src="https://www.youtube.com/embed/Ee2AdCPWOW0?autoplay=1&mute=1" title="YouTube video player"
+        allow="autoplay; encrypted-media" frameborder="0"></iframe>
+</div>
+
+
+
+<section id="section1">
+    <div class="container">
+        <h1>VISIT TAMPA</h1>
+        <div class="left-text">
+            <p>
+                Tampa, Florida has an enormous variety of attractions and perks for the people who live in and
+                around the city. Waterside cafes, Busch Gardens, the Florida Aquarium, Channelside shopping and the
+                Tampa Bay Bucaneers, Devil Rays and Lightning are just few of the biggest attractions. Then there's
+                Ybor City, where visitors can find hand-rolled cigars and Cuban sandwiches. And don't forget the
+                ocean and the white sand beaches, which offer people the chance to participate in jet skiing,
+                parasailing, sport fishing and boating.
+                <br>
+                <br>
+                Tampa is a very multi-cultural city and has a Hispanic population that exerts major influence in the
+                area. 10% of the population are Latino. There are a number of museums to visit in and around Tampa,
+                including the Pioneer Florida Museum, the St. Petersburg Museum of History, the gulf Coast World of
+                Science, the Yulee Sugar Mill Ruins, the Boatyard Village, the Salvador Dali Museum and the
+                Children's Museum of Tampa. Live theater can be seen at the Friday Morning Musicale in Hyde Park,
+                Gorilla Theater in Drew Park, the Tampa Bay Performing Arts Center and Tampa Theater. The city also
+                has a number of art galleries of interest, such as the African Art Gallery, Artists Unlimited, the
+                Centre Gallery, the Covivant Gallery and Graphicstudio.
+                Every year, the Gasparilla Pirate Festival draws a huge
+                crowd of rowdy swashbucklers.
+                <br>
+                <br>
+                Tampa Bay is a large natural harbor and shallow estuary connected to the Gulf of Mexico on the
+                west-central coast of Florida, comprising Hillsborough Bay, McKay Bay, Old Tampa Bay, Middle Tampa
+                Bay, and Lower Tampa Bay. The largest freshwater inflow into the bay is the Hillsborough River,
+                which flows into Hillsborough Bay in downtown Tampa. Many other smaller rivers and streams also flow
+                into Tampa Bay, resulting in a large watershed area.
+
+            </p>
+
+        </div>
+
+        <div class="right-map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d225470.28811113635!2d-82.59436762643!3d27.994714746290292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2b782b3b9d1e1%3A0xa75f1389af96b463!2sTampa%2C%20FL!5e0!3m2!1sen!2sus!4v1678414365024!5m2!1sen!2sus"
+                class="map" style="border: 3px;;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+
+    </div>
+
+</section>
+<canvas id="barchartexample" class="new"></canvas>
+{% endblock %}
+
+{% block script %}
+<script>
+    new Chart(document.getElementById("barchartexample"), {
+        type: 'bar',
+        data: {
+            labels: ["2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020"],
+            datasets: [
+                {
+                    label: "Revenue in $ Thousands",
+                    backgroundColor: ["#FF3FF0", "#FFC300", "#A6F7E2", "#A9FF77", "#FFAC35", "#35E3FF", "#FF5733", "#C70039", "#900C3F", "#B63FFF"],
+                    data: [47828, 49345, 57315, 62511, 68540, 78777, 90830, 100152, 118030, 104507, 0]
+                }
+            ]
+        },
+        options: {
+            legend: { display: false },
+            title: {
+                display: true,
+                text: 'TAMPA TOURISM REVENUE',
+                fontSize: 20
+            },
+            scales: {
+                yAxes: [{
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Revenue in $ Thousands'
+                    }
+                }]
+            }
+        }
+    });
+</script>
+
+
+<script>
+    var menubutton = document.getElementById("menubutton")
+    var navigation = document.getElementById("navigation")
+    var MENU = document.getElementById("MENU")
+    navigation.style.right = "-250px"
+
+    menubutton.onclick = function () {
+        if (navigation.style.right == "-250px") {
+            navigation.style.right = "0";
+            MENU.src = "{{ url_for('static', filename = 'close1.png') }}"
+        }
+        else {
+            navigation.style.right = "-250px";
+            MENU.src = "{{ url_for('static', filename = 'menu1.png') }}"
+        }
+    }
+</script>
+{% endblock %}

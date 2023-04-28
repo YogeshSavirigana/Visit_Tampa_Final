@@ -1,0 +1,20 @@
+{%extends "layout3.html"%}   
+{%block title%}Users{%endblock%}
+{%block thead%}
+<td><strong>Booking ID</strong></td>
+<td><strong>Name</strong></td>
+<td><strong>Email ID</strong></td>
+<td><strong>Phone Number</strong></td>
+<td><strong>Booking Date</strong></td>
+{%endblock%}
+{%block data%}
+{% for row in rows %}
+<tr>
+    <td>{{ row["rowid"] }}</td>
+    <td>{{ row["name"] }}</td>
+    <td> {{ row["email"]}}</td>
+    <td>{{ row["phone"] }}</td>
+    <td>{{ row["date"] }}</td>
+</tr>
+{% endfor %}
+{%endblock%}     
