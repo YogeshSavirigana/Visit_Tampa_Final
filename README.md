@@ -24,4 +24,4 @@ About: The "About" page contains information about the creators of the website, 
 
 Responsive Design: The website is built with responsive design principles, making it accessible and visually appealing on various devices, including desktops, tablets, and smartphones.
 
-# "Visit Tampa" offers an immersive experience for users, making it a valuable resource for tourists, residents, and anyone interested in exploring the wonders of Tampa, Florida. Whether you're looking for places to visit, interesting facts, or insider recommendations, this website is your go-to guide for a memorable Tampa experience.
+"Visit Tampa" offers an immersive experience for users, making it a valuable resource for tourists, residents, and anyone interested in exploring the wonders of Tampa, Florida. Whether you're looking for places to visit, interesting facts, or insider recommendations, this website is your go-to guide for a memorable Tampa experience.
